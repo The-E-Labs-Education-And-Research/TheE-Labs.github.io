@@ -7,63 +7,114 @@
     scroll-behavior: smooth;
 }
 
-:root{
-    --headerColor: #4682B4;
-    --primaryBackground: #4682B4;
-}
-
 body {
-    background-color: #f5f5f5;
+    background-color: #000000;
+    color: #ffffff;
     font-family: "Poppins", sans-serif;
- }
+}
 
- .header {
-    display: flex;                              /* to make object flexible */
-    flex-direction: row;                        /* to make item flexible in particular distance */
-    justify-content: right;                     /* to align the contect in direction right or left */
-    align-items: center;                        /* to align the content in position up or down */
-    height: 60px;                               /* height of the header */
-    background-color: var(--headerColor);       /* to choose background color */
-    padding: 0 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
- }
- .header a {
-    text-decoration: none;
-    color: #333;
-    margin-right: 10px;
-    font-size: 16px;
-    font-weight: 600;
- }
- .header a:hover {
-    color: #fafafa;
- }
-
- .card {
+/* Nav Bar */
+header nav {
     display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 20px auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+header nav .header_links ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.form-group label {
+header nav .header_links ul li, section.main ul li {
+    list-style-type: none;
+}
+
+header nav .header_links ul li a {
+    outline: none;
+    text-decoration: none;
+    color: #a6a8b8;
+    padding: 5px 12px;
+    transition: 0.3s all;
+    font-size: 15px;
+}
+
+header nav .header_links ul li a:hover {
+    color: white;
+}
+
+header nav .header_logo span {
     display: block;
-    margin-bottom: 5px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    object-fit: cover;
+    border: 1px solid #fff;
+    cursor: pointer;
+   
+   }
+
+/* Responsive nav bar */
+
+@media only screen and (max-width: 630px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+    }
+    header nav .header_logo {
+        margin-bottom: 20px;
+    }
 }
 
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+@media only screen and (max-width: 320px) {
+    header nav .header_links ul {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
-.form-group textarea 
-{
-    resize: vertical;
+/* Main */
+
+section.main {
+    display: flex;      /* Need to change as per requirement */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 70vh;
+
 }
+
+section.main ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section.main ul li a:hover {
+    transition: 0.2s all;
+    color: #fff;
+}
+
+footer{
+   background-color: #16161a;
+   border: 1px solid #fff;
+}
+
+footer ul li a {
+    display: flex;
+   flex-direction: row;
+   text-decoration: none;
+   color: #ffffff;
+   margin: 20px 5px;
+   font-size: 25px;
+   padding: 5px;
+ }
