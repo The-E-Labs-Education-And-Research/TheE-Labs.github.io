@@ -175,21 +175,36 @@ footer nav .footer_copyright span {
 }
 
 .slider-container {
-    height: 500px;
-    width: 100%;
     position: relative;
-    background-color: #fff;
-    background-image: url("https://www.yourchoiceadvisors.com/wp-content/uploads/2017/01/Slider-background.jpg");
-    color: #fff;
+    height: 500px;
+    overflow: hidden;
+    width: 50% !important;
+    height: auto !important;
 }
+video {
+    background: url(cover.jpg) no-repeat;
+    top: 0px;
+    left: 0px;
+    width: 100% !important;
+    min-width: 100%;
+    min-height: 100%;
+}
+/*
+video{
+    object-fit: cover;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+}*/
 
 .header-container {
-    background-color: #55636F;
+    background-color: #2d353b;
 }
 
 .card-container {
     display: table;
-    background-color: #55636F;
+    background-color: #2d353b;
     justify-content: space-around;
     padding: 20px;
 }
