@@ -203,7 +203,7 @@ footer nav .footer_copyright span {
 
 .right {
     flex: 50%;
-    background-color: #191c21;;
+    background-color: #191c21;
     align-content: center;
     vertical-align: middle;
 }
@@ -215,12 +215,17 @@ footer nav .footer_copyright span {
 /* Add padding to containers */
 .container-form {
     padding: 16px;
+}
+
+form {
     vertical-align: middle;
+    align-items: center;
+    margin: 10% auto;
+    width: 100%;
 }
 
 /* Full-width input fields */
-input[type=text],
-input[type=password] {
+input[type=text] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -229,8 +234,7 @@ input[type=password] {
     background: #f1f1f1;
 }
 
-input[type=text]:focus,
-input[type=password]:focus {
+input[type=text]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -260,10 +264,4 @@ hr {
 /* Add a blue text color to links */
 a {
     color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-    background-color: #f1f1f1;
-    text-align: center;
 }
