@@ -10,10 +10,41 @@
     scroll-behavior: smooth;
 }
 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section--xs-small .heading {
+    margin-bottom: calc(15px - 15px);
+}
+
+.heading {
+    text-align: center;
+}
+
+.row {
+    font-size: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.section--dark {
+    color: #fff
+}
+
 body {
     background-color: #fff;
+    box-sizing: border-box;
     color: #ffffff;
     font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    letter-spacing: normal;
+    text-rendering: optimizeLegibility;
 }
 
 /* Nav Bar */
@@ -23,7 +54,7 @@ header nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 19px 40px;
 }
 
 
@@ -55,7 +86,6 @@ header nav .header_logo span {
     display: block;
     color: #a6a8b8;
     width: 100px;
-    height: 50px;
     text-align: center;
     object-fit: cover;
     border: 1px solid #a6a8b8;
@@ -160,169 +190,80 @@ footer nav .footer_copyright span {
     cursor: pointer;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    background: linear-gradient(to right, #2d353b 0%, #2d353b 100%);
-    font-size: 12px;
-  }
-  
-  body, button, input {
-    font-weight: 700;
-    letter-spacing: 1.4px;
-  }
-  
-  .background {
-    display: flex;
-    min-height: 100vh;
-  }
-  
-  .container {
-    flex: 0 1 700px;
-    margin: auto;
-    padding: 10px;
-  }
-  
-  .screen {
-    position: relative;
-    background: #3e3e3e;
-    border-radius: 15px;
-  }
-  
-  .screen:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    right: 20px;
-    bottom: 0;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-    z-index: -1;
-  }
-  
-
-  .screen-body {
-    display: flex;
-  }
-  
-  .screen-body-item {
-    flex: 1;
-    padding: 50px;
-  }
-  
-  .screen-body-item.left {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .app-title {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    color: #fff;
-    font-size: 26px;
-  }
-  
-  .app-title:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 25px;
-    height: 4px;
-    background: #09ed36;
-  }
-  
-  .app-contact {
-    margin-top: auto;
-    font-size: 10px;
-    color: #888;
-  }
-  
-  .app-form-group {
-    margin-bottom: 15px;
-  }
-  
-  .app-form-group.message {
-    margin-top: 40px;
-  }
-  
-  .app-form-group.buttons {
-    margin-bottom: 0;
-    text-align: right;
-  }
-  
-  .app-form-control {
+.container {
     width: 100%;
-    padding: 10px 0;
-    background: none;
+    height: 100vh;
+    display: flex;
+}
+
+.left {
+    flex: 50%;
+    background-color: #f1f1f1;
+}
+
+.right {
+    flex: 50%;
+    background-color: #191c21;;
+    align-content: center;
+    vertical-align: middle;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Add padding to containers */
+.container-form {
+    padding: 16px;
+    vertical-align: middle;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
     border: none;
-    border-bottom: 1px solid #666;
-    color: #ddd;
-    font-size: 14px;
-    text-transform: uppercase;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
     outline: none;
-    transition: border-color .2s;
-  }
-  
-  .app-form-control::placeholder {
-    color: #666;
-  }
-  
-  .app-form-control:focus {
-    border-bottom-color: #ddd;
-  }
-  
-  .app-form-button {
-    background: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.submitbtn {
+    background-color: rgb(182, 46, 206);
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
     border: none;
-    color: #fff;
-    font-size: 14px;
     cursor: pointer;
-    outline: none;
-  }
-  
-  .app-form-button:hover {
-    color: #fff;
-  }
-  
-  
-  @media screen and (max-width: 520px) {
-    .screen-body {
-      flex-direction: column;
-    }
-  
-    .screen-body-item.left {
-      margin-bottom: 30px;
-    }
-  
-    .app-title {
-      flex-direction: row;
-    }
-  
-    .app-title span {
-      margin-right: 12px;
-    }
-  
-    .app-title:after {
-      display: none;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .screen-body {
-      padding: 40px;
-    }
-  
-    .screen-body-item {
-      padding: 0;
-    }
-  }
-  
+    width: 100%;
+    opacity: 0.9;
+}
+
+.submitbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}

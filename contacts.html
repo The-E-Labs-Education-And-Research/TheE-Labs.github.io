@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/contacts.css">
 
     <!-- Javascript -->
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contacts.js"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -36,48 +36,42 @@
             <div class="header_links">
                 <ul class="nav_links">
                     <li class="nav_link"><a href="index.html">Home</a></li>
+                    <li class="nav_link"><a href="#">Developers</a></li>
                     <li class="nav_link"><a href="contacts.html">Contact Us</a></li>
-                    <!-- <li class="nav_link"><a href="#">Repos</a></li> -->
                 </ul>
             </div>
         </nav>
     </header>
 
     <section class="main">
-        <div class="screen-header-right">
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
-          </div>
+
+        <div class="container">
+            <div class="left">
+
+            </div>
+            <div class="right">
+                <form action="action_page.php">
+                    <div class="container-form">
+                        <hr>
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Candidate Name" name="name" id="name required">
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+                        <label for="edu"><b>Education</b></label>
+                        <input type="text" placeholder="Enter Education" name="edu" id="edu" required>
+
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                        <hr>
+
+                        <button type="submit" class="submitbtn">submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="screen-body">
-          <div class="screen-body-item left">
-            <div class="app-title">
-              <span>CONTACT US</span>
-             <!-- <span>US</span> -->
-            </div>
-            <div class="app-contact">CONTACT INFO : +91 9481******</div>
-          </div>
-          <div class="screen-body-item">
-            <div class="app-form">
-              <div class="app-form-group">
-                <input class="app-form-control" placeholder="NAME">
-              </div>
-              <div class="app-form-group">
-                <input class="app-form-control" placeholder="EMAIL">
-              </div>
-              <div class="app-form-group">
-                <input class="app-form-control" placeholder="CONTACT NO">
-              </div>
-              <div class="app-form-group message">
-                <input class="app-form-control" placeholder="MESSAGE">
-              </div>
-              <div class="app-form-group buttons">
-                <button class="app-form-button">CANCEL</button>
-                <button class="app-form-button">SEND</button>
-              </div>
-            </div>
-          </div>
+
     </section>
 
     <div class="separator">
