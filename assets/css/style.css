@@ -386,6 +386,12 @@ img {
     align-items: center;
 }
 
+.slider-container video{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
 .section--light {
     color: #55636F;
 }
@@ -427,25 +433,6 @@ img {
     overflow: hidden;
     width: 100%;
     height: 300px;
-}
-
-.slide {
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s;
-    opacity: 0;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .card.section--light {
