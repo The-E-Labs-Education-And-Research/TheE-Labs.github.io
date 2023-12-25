@@ -186,82 +186,180 @@ footer nav .footer_links ul li a:hover {
 footer nav .footer_copyright span {
     display: flex;
     flex-direction: row;
+    color: white;
     object-fit: cover;
     cursor: pointer;
 }
 
 .container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
+    max-width: 1180px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-.left {
-    flex: 50%;
-    background-color: #f1f1f1;
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.right {
-    flex: 50%;
-    background-color: #191c21;
-    align-content: center;
-    vertical-align: middle;
+*,
+::after,
+::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-* {
-    box-sizing: border-box
+body {
+    color: #55636F;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    letter-spacing: normal;
 }
 
-/* Add padding to containers */
-.container-form {
-    padding: 16px;
+.row {
+    font-size: 0;
 }
 
-form {
-    vertical-align: middle;
-    align-items: center;
-    margin: 10% auto;
-    width: 100%;
+*,
+::after,
+::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
-/* Full-width input fields */
-input[type=text] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+[class*="col-"] {
     display: inline-block;
-    border: none;
-    background: #f1f1f1;
+    float: none;
+    font-size: 16px;
+    vertical-align: top;
 }
 
-input[type=text]:focus {
-    background-color: #ddd;
-    outline: none;
+[class*="col-"] {
+    display: inline-block;
+    float: none;
+    font-size: 16px;
+    vertical-align: top;
+  }
+
+@media (min-width: 544px) {
+    .col-sm-10 {
+        float: left;
+        width: 83.333333%;
+    }
 }
 
-/* Overwrite default styles of hr */
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
+.col-sm-10 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-/* Set a style for the submit/register button */
-.submitbtn {
-    background-color: rgb(182, 46, 206);
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
+.panel {
+    background: #fff;
+    margin-bottom: 2rem;
+}
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+[class*="col-"] {
+    font-size: 16px;
+}
+
+.section--page .panel__body {
+    text-align: left;
+    padding: 30px 60px;
+}
+
+[class*="col-"] {
+    font-size: 16px;
+}
+
+.section--page .page__title {
+    font-size: 1.5rem;
+}
+
+.panel__body> :first-child {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+.blog__title,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section--page .panel__body{
+    text-align: left;
+    padding: 30px 60px;
+}
+
+.section--global {
+    vertical-align: top;
+    padding: 100px 0;
+    padding-bottom: 100px;
+    padding-bottom: calc(100px - 30px);
+    background: #eeeeee;
+}
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.container--main {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    display: table;
+    overflow: hidden;
     width: 100%;
-    opacity: 0.9;
+    height: 100%;
+    table-layout: fixed;
+    background: #ffffff;
 }
 
-.submitbtn:hover {
-    opacity: 1;
+.content-wrap {
+    display: table-row;
+    height: 100%;
 }
 
-/* Add a blue text color to links */
-a {
-    color: dodgerblue;
-}
