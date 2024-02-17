@@ -56,7 +56,9 @@ header nav {
     justify-content: space-between;
     padding: 0px 40px;
 }
-
+.brand-logo{
+    height: 6rem;
+}
 header nav .header_links ul {
     display: flex;
     flex-wrap: wrap;
@@ -152,10 +154,12 @@ footer nav {
     height: 100px;
     /* Height of the footer */
     background-color: #16161a;
-    border: 1px solid #fff;
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer nav .footer_links ul {

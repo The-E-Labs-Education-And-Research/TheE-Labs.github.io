@@ -54,7 +54,7 @@ header nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 19px 40px;
+    padding: 0px 40px;
 }
 
 
@@ -82,20 +82,7 @@ header nav .header_links ul li a:hover {
     color: white;
 }
 
-header nav .header_logo span {
-    display: block;
-    color: #a6a8b8;
-    width: 100px;
-    text-align: center;
-    object-fit: cover;
-    border: 1px solid #a6a8b8;
-    cursor: pointer;
-}
 
-header nav .header_logo span:hover {
-    color: white;
-    border: 1px solid white
-}
 
 /* Responsive nav bar */
 
@@ -148,16 +135,26 @@ section.main ul li a:hover {
     color: #fff;
 }
 
+.nav_link_active{
+    border-bottom: 2px solid white;
+   
+    a{color:white !important; font-weight: bold !important;}
+}
+.brand-logo{
+    height: 6rem;
+}
 footer nav {
     display: flex;
     flex-direction: row;
     height: 100px;
     /* Height of the footer */
     background-color: #16161a;
-    border: 1px solid #fff;
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 footer nav .footer_links ul {
@@ -332,6 +329,7 @@ h1 {
 
 .section--global {
     vertical-align: top;
+    height:80vh;
     padding: 100px 0;
     padding-bottom: 100px;
     padding-bottom: calc(100px - 30px);
