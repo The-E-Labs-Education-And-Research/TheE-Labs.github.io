@@ -151,7 +151,7 @@ section.main ul li a:hover {
 footer nav {
     display: flex;
     flex-direction: row;
-    height: 100px;
+    /* height: 100px; */
     /* Height of the footer */
     background-color: #16161a;
     align-items: center;
@@ -160,6 +160,8 @@ footer nav {
     position: absolute;
     bottom: 0;
     width: 100%;
+    flex-wrap: wrap;
+
 }
 
 footer nav .footer_links ul {
